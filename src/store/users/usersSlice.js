@@ -1,6 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const url = 'https://randomuser.me/api/?results=5';
+
+// export const getUsers = createAsyncThunk('users/getUsers', async (action, thunkAPI) => {
+//   try {
+//     const resp = await axios(url);
+//     return resp.data
+//   } catch (error) {
+//     return thunkAPI.rejectWithValue('Thunk Error')
+//   }
+// })
 
 export const getUsers = createAsyncThunk('users/getUsers', async (action, thunkAPI) => {
   try {
